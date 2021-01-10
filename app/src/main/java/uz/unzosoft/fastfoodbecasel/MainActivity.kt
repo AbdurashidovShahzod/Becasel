@@ -112,21 +112,14 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        listPopular.add(PopularFood("Hamburger", "10000", R.drawable.popularfood1))
-        listPopular.add(PopularFood("Hamburger", "10000", R.drawable.popularfood1))
-        listPopular.add(PopularFood("Hamburger", "10000", R.drawable.popularfood1))
-        listPopular.add(PopularFood("Hamburger", "10000", R.drawable.popularfood1))
-        listPopular.add(PopularFood("Hamburger", "10000", R.drawable.popularfood1))
-        listPopular.add(PopularFood("Hamburger", "10000", R.drawable.popularfood1))
-        listPopular.add(PopularFood("Hamburger", "10000", R.drawable.popularfood1))
-        listPopular.add(PopularFood("Hamburger", "10000", R.drawable.popularfood1))
-        listPopular.add(PopularFood("Hamburger", "10000", R.drawable.popularfood1))
-        listPopular.add(PopularFood("Hamburger", "10000", R.drawable.popularfood1))
-        listPopular.add(PopularFood("Hamburger", "10000", R.drawable.popularfood1))
-        listPopular.add(PopularFood("Hamburger", "10000", R.drawable.popularfood1))
-        listPopular.add(PopularFood("Hamburger", "10000", R.drawable.popularfood1))
-        listPopular.add(PopularFood("Hamburger", "10000", R.drawable.popularfood1))
-        listPopular.add(PopularFood("Hamburger", "10000", R.drawable.popularfood1))
-        listPopular.add(PopularFood("Hamburger", "10000", R.drawable.popularfood1))
+        listPopular.add(PopularFood("Pizza", "", R.drawable.hawaiian))
+        listPopular.add(PopularFood("Burgers", "", R.drawable.bossburger))
+        listPopular.add(PopularFood("Spinners", "", R.drawable.spinner))
+        listPopular.add(PopularFood("Chicken", "", R.drawable.chicken))
+        listPopular.add(PopularFood("Drinks", "", R.drawable.drinks))
+        listPopular.add(PopularFood("Appertizers and Combo", "", R.drawable.appr))
+        listPopular.add(PopularFood("Deserts", "", R.drawable.deserts))
+        listPopular.add(PopularFood("Other", "", R.drawable.other))
+        listPopular.add(PopularFood("Kids", "", R.drawable.kids))
     }
 }
