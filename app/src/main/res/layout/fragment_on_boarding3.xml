@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00BCD4">
+    android:background="#55016C">
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/imageView1"
         android:layout_width="250dp"
         android:layout_height="230dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/aaaa"
+        android:src="@drawable/on_b_3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".3"
@@ -25,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="Sizling bites"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/imageView1"
@@ -36,13 +37,15 @@
         app:layout_constraintVertical_bias=".0" />
 
     <TextView
+        android:id="@+id/skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="30dp"
         android:text="Skip"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="@id/textView1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1"
@@ -56,6 +59,7 @@
         android:fontFamily="sans-serif-light"
         android:text="Fresh"
         android:textSize="42sp"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
@@ -69,7 +73,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
         android:text="Everthing"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="56sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -83,6 +87,7 @@
         android:id="@+id/textView4"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:textColor="@color/white"
         android:layout_marginTop="5dp"
         android:text="Everthing you willex experince will be absoluety"
         android:textSize="18sp"

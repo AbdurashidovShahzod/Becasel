@@ -11,7 +11,7 @@
         android:layout_height="230dp"
         app:riv_corner_radius="15dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/aaaa"
+        android:src="@drawable/on_b_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".3"

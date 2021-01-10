@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D2E91E63">
+    android:background="#F5446C">
 
 
     <com.makeramen.roundedimageview.RoundedImageView
@@ -13,7 +13,7 @@
         app:riv_corner_radius="15dp"
         android:layout_height="230dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/aaaa"
+        android:src="@drawable/on_b_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".3"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="Sizling bites"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/imageView1"
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="30dp"
         android:text="Skip"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/textView1"

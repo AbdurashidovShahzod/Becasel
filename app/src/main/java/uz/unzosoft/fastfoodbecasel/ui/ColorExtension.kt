@@ -1,4 +1,4 @@
-package uz.dilnoza.finalpayme.utils.extensions
+package uz.unzosoft.fastfoodbecasel.ui
 
 import android.graphics.Color
 
