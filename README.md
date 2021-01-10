@@ -1,0 +1,2 @@
+# Becasel
+The Becasel's Android app lets you order anything from the menu (Fast food and drinks). Delivery places have made it easy to order over the phone, the web, and just about any other way they've been able to come up with. The app lets you schedule a pickup for any time of day, save cards to use for payment, customize items on the menu, view nutritional information Within your account on the app, you can even save your favorite customized meals.
