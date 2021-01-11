@@ -3,6 +3,7 @@ package uz.unzosoft.fastfoodbecasel
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Spinner
 import kotlinx.android.synthetic.main.activity_main.*
 import uz.unzosoft.fastfoodbecasel.adapters.FoodAdapter
 import uz.unzosoft.fastfoodbecasel.adapters.AsiaFoodAdapter
@@ -16,6 +17,9 @@ class MainActivity : AppCompatActivity() {
     var listFood = ArrayList<LoookFood>()
     var listPopular = ArrayList<CategoriesFood>()
     var listChicken = ArrayList<LoookFood>()
+    var listSpinners = ArrayList<LoookFood>()
+    var listPizza = ArrayList<LoookFood>()
+    var listDrinks = ArrayList<LoookFood>()
 
 
     override
@@ -24,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initData()
 
-        asiaFoodAdapter = AsiaFoodAdapter(this, listFood)
+        asiaFoodAdapter = AsiaFoodAdapter(this, listDrinks)
         foodAdapter = FoodAdapter(this, listPopular)
         popular_recycler.adapter = foodAdapter
         asia_recycler.adapter = asiaFoodAdapter
@@ -245,6 +249,173 @@ class MainActivity : AppCompatActivity() {
                 "Becausel"
             )
         )
+        /**
+         * Spinner food
+         */
+        listSpinners.add(
+            LoookFood(
+                "SPINNER SUPER CHARGED",
+                "12 000 UZS",
+                R.drawable.spinner,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listSpinners.add(
+            LoookFood(
+                "SMILE BOX",
+                "16 000 UZS",
+                R.drawable.spinner,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listSpinners.add(
+            LoookFood(
+                "DUET MASTER",
+                "18 000 UZS",
+                R.drawable.spinner,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listSpinners.add(
+            LoookFood(
+                "SPINNER SALSA WRAP",
+                "12 000 UZS",
+                R.drawable.spinner,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listSpinners.add(
+            LoookFood(
+                "SPINNER NO SOUCE",
+                "12 000 UZS",
+                R.drawable.spinner,
+                "5.0",
+                "Becausel"
+            )
+        )
+
+        /**
+         * Pizza food
+         */
+        listPizza.add(
+            LoookFood(
+                "PIZZA SUPREME",
+                "39 000 UZS",
+                R.drawable.popularfood3,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listPizza.add(
+            LoookFood(
+                "PIZZA PEPPERONI",
+                "29 000 UZS",
+                R.drawable.popularfood3,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listPizza.add(
+            LoookFood(
+                "PIZZA STEAK",
+                "49 000 UZS",
+                R.drawable.popularfood3,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listPizza.add(
+            LoookFood(
+                "PIZZA BBQ CHICKEN",
+                "33 000 UZS",
+                R.drawable.popularfood3,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listPizza.add(
+            LoookFood(
+                "PIZZA SPICY",
+                "32 000 UZS",
+                R.drawable.popularfood3,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listPizza.add(
+            LoookFood(
+                "PIZZA VEGETARIAN",
+                "26 000 UZS",
+                R.drawable.popularfood3,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listPizza.add(
+            LoookFood(
+                "PIZZA WHITE CHEESE",
+                "21 000 UZS",
+                R.drawable.popularfood3,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listPizza.add(
+            LoookFood(
+                "PIZZA HAWAIIAN",
+                "31 000 UZS",
+                R.drawable.popularfood3,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listPizza.add(
+            LoookFood(
+                "PIZZA MARGARITTA",
+                "25 000 UZS",
+                R.drawable.popularfood3,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listPizza.add(
+            LoookFood(
+                "PIZZA FRANKFURT",
+                "32 000 UZS",
+                R.drawable.popularfood3,
+                "5.0",
+                "Becausel"
+            )
+        )
+        /**
+         * Drink food
+         */
+        listDrinks.add(LoookFood("MINERALKA 0.5L BEZGAZ","3 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("MINERALKA 1.5L BEZGAZ","5 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("MINERALKA 1L BEZGAZ","4 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("MINERALKA 0.5L GAZ","3 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("MINERALKA 1L GAZ","4 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("MINERALKA 1.5L GAZ","5 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("COCA COLA 400ML","5 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("COCA COLA 1.5L","11 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("COCA COLA 1L","9 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("COCA COLA 0.5","6 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("FANTA 400ML","5 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("FANTA 1.5L","11 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("FANTA 0.5L","6 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("FANTA 1L","9 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("SPRITE 0.5L","6 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("SPRITE 1.5L","11 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("SPRITE 400ML","5 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("ICE TEA","9 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("SOK 1L","10 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+        listDrinks.add(LoookFood("SOK 1L (GRANAT,APELSIN,MALINA)","11 000 UZS",R.drawable.drinks,"5.0","Becausel"))
+
+
 
     }
 }
