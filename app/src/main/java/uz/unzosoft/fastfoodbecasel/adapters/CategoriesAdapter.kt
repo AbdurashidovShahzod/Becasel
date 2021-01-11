@@ -11,33 +11,33 @@ import uz.unzosoft.fastfoodbecasel.R
 import uz.unzosoft.fastfoodbecasel.ui.model.LoookFood
 
 class CategoriesAdapter(var context: Context, asiaFoodList: List<LoookFood>) :
-    RecyclerView.Adapter<CategoriesAdapter.AsiaFoodViewHolder>() {
-    var asiaFoodList: List<LoookFood> = asiaFoodList
+    RecyclerView.Adapter<CategoriesAdapter.CategoriesFood>() {
+    var categoriesList: List<LoookFood> = asiaFoodList
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): AsiaFoodViewHolder {
+    ): CategoriesFood {
         val view: View =
             LayoutInflater.from(context).inflate(R.layout.asia_food_row_item, parent, false)
-        return CategoriesAdapter.AsiaFoodViewHolder(view)
+        return CategoriesFood(view)
     }
 
     override fun onBindViewHolder(
-        holder: CategoriesAdapter.AsiaFoodViewHolder,
+        holder: CategoriesFood,
         position: Int
     ) {
-        holder.foodImage.setImageResource(asiaFoodList[position].imageUrl)
-        holder.name.text=(asiaFoodList[position].name)
-        holder.price.text=(asiaFoodList[position].price)
-        holder.rating.text=(asiaFoodList[position].rating)
-        holder.restaurantName.text = asiaFoodList[position].restorantname
+        holder.foodImage.setImageResource(categoriesList[position].imageUrl)
+        holder.name.text = (categoriesList[position].name)
+        holder.price.text = (categoriesList[position].price)
+        holder.rating.text = (categoriesList[position].rating)
+        holder.restaurantName.text = categoriesList[position].restorantname
     }
 
     override fun getItemCount(): Int {
-        return asiaFoodList.size
+        return categoriesList.size
     }
 
-    class AsiaFoodViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class CategoriesFood(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var foodImage: ImageView = itemView.findViewById(R.id.food_image)
         var price: TextView = itemView.findViewById(R.id.price)
         var name: TextView = itemView.findViewById(R.id.name)

@@ -15,50 +15,52 @@ import uz.unzosoft.fastfoodbecasel.ui.model.CategoriesFood
 
 
 class FoodAdapter(private var context: Context, private var popularFoodList: List<CategoriesFood>) :
-    RecyclerView.Adapter<FoodAdapter.PopularFoodViewHolder>() {
-    private var  index=-1
+    RecyclerView.Adapter<FoodAdapter.FastFoodMain>() {
+    private var index = -1
     private var listener: SingleBlock<Int>? = null
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopularFoodViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FastFoodMain {
         val view: View =
             LayoutInflater.from(context).inflate(R.layout.popular_food_row_item, parent, false)
-        return PopularFoodViewHolder(view)
+        return FastFoodMain(view)
     }
 
-    override fun onBindViewHolder(holder: PopularFoodViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: FastFoodMain, position: Int) {
         holder.foodImage.setImageResource(popularFoodList[position].imageUrl)
         holder.name.text = popularFoodList[position].name
         holder.price.text = popularFoodList[position].price
         holder.itemView.setOnClickListener {
-            index=position
+            index = position
             notifyDataSetChanged()
         }
         holder.item.apply {
-            alpha = if(index==position){
+            alpha = if (index == position) {
                 setBackgroundColor(Color.parseColor("#FF6200EE"))
                 0.2F
-            }else{setBackgroundColor(Color.parseColor("#FFFfff"))
+            } else {
+                setBackgroundColor(Color.parseColor("#FFFfff"))
                 0F
 
             }
         }
-        if (index>=0){
-        listener?.invoke(index)
+        if (index >= 0) {
+            listener?.invoke(index)
         }
     }
 
     override fun getItemCount(): Int {
         return popularFoodList.size
     }
+
     fun setOnClickListener(block: SingleBlock<Int>) {
         notifyDataSetChanged()
         listener = block
     }
 
-    class PopularFoodViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class FastFoodMain(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var foodImage: ImageView = itemView.findViewById(R.id.food_image)
         var price: TextView = itemView.findViewById(R.id.price)
         var name: TextView = itemView.findViewById(R.id.name)
-        var item:FrameLayout=itemView.findViewById(R.id.itemSelect)
+        var item: FrameLayout = itemView.findViewById(R.id.itemSelect)
 
     }
 
