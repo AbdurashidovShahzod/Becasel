@@ -7,14 +7,16 @@ import kotlinx.android.synthetic.main.activity_main.*
 import uz.unzosoft.fastfoodbecasel.adapters.FoodAdapter
 import uz.unzosoft.fastfoodbecasel.adapters.AsiaFoodAdapter
 import uz.unzosoft.fastfoodbecasel.ui.SeconFoodActivity
-import uz.unzosoft.fastfoodbecasel.ui.model.AsiaFood
-import uz.unzosoft.fastfoodbecasel.ui.model.PopularFood
+import uz.unzosoft.fastfoodbecasel.ui.model.LoookFood
+import uz.unzosoft.fastfoodbecasel.ui.model.CategoriesFood
 
 class MainActivity : AppCompatActivity() {
     lateinit var asiaFoodAdapter: AsiaFoodAdapter
     lateinit var foodAdapter: FoodAdapter
-    var listFood = ArrayList<AsiaFood>()
-    var listPopular = ArrayList<PopularFood>()
+    var listFood = ArrayList<LoookFood>()
+    var listPopular = ArrayList<CategoriesFood>()
+    var listChicken = ArrayList<LoookFood>()
+
 
     override
     fun onCreate(savedInstanceState: Bundle?) {
@@ -32,10 +34,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initData() {
-        listFood.add(AsiaFood("BIGGER", "16 000 UZS", R.drawable.a1, "5.0", "Becausel"))
-        listFood.add(AsiaFood("CLASSIC", "12 000 UZS", R.drawable.classic, "5.0", "Becausel"))
+        listFood.add(LoookFood("BIGGER", "16 000 UZS", R.drawable.a1, "5.0", "Becausel"))
+        listFood.add(LoookFood("CLASSIC", "12 000 UZS", R.drawable.classic, "5.0", "Becausel"))
         listFood.add(
-            AsiaFood(
+            LoookFood(
                 "CHEESEBURGER",
                 "24 000 UZS",
                 R.drawable.chesbirger,
@@ -44,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             )
         )
         listFood.add(
-            AsiaFood(
+            LoookFood(
                 "CHILI LONGER",
                 "21 000 UZS",
                 R.drawable.chililonger,
@@ -53,12 +55,12 @@ class MainActivity : AppCompatActivity() {
             )
         )
         listFood.add(
-            AsiaFood(
+            LoookFood(
                 "LOOOK", "14 000 UZS", R.drawable.look, "4.5", "Becausel"
             )
         )
         listFood.add(
-            AsiaFood(
+            LoookFood(
                 "CHICKEN LONGER",
                 "14 000 UZS",
                 R.drawable.chickenloger,
@@ -67,13 +69,13 @@ class MainActivity : AppCompatActivity() {
             )
         )
         listFood.add(
-            AsiaFood(
+            LoookFood(
                 "HAMBURGER",
                 "21 000 UZS", R.drawable.humbergers, "4.6", "Becausel"
             )
         )
         listFood.add(
-            AsiaFood(
+            LoookFood(
                 "DOUBLECHEESE BURGER",
                 "34 000 UZS",
                 R.drawable.doubleches,
@@ -82,7 +84,7 @@ class MainActivity : AppCompatActivity() {
             )
         )
         listFood.add(
-            AsiaFood(
+            LoookFood(
                 "BEEF LONGER",
                 "21 000 UZS",
                 R.drawable.beeflonger,
@@ -91,7 +93,7 @@ class MainActivity : AppCompatActivity() {
             )
         )
         listFood.add(
-            AsiaFood(
+            LoookFood(
                 "CRISPY BURGER",
                 "15 000 UZS",
                 R.drawable.cripsy,
@@ -100,7 +102,7 @@ class MainActivity : AppCompatActivity() {
             )
         )
         listFood.add(
-            AsiaFood(
+            LoookFood(
                 "BOSS BURGER",
                 "34 000 UZS",
                 R.drawable.bossburger,
@@ -111,14 +113,14 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        listPopular.add(PopularFood("Chicken", "", R.drawable.chicken))
-        listPopular.add(PopularFood("Burgers", "", R.drawable.bossburger))
-        listPopular.add(PopularFood("Spinners", "", R.drawable.spinner))
-        listPopular.add(PopularFood("Pizza", "", R.drawable.hawaiian))
-        listPopular.add(PopularFood("Drinks", "", R.drawable.drinks))
-        listPopular.add(PopularFood("Appertizers and Combo", "", R.drawable.appr))
-        listPopular.add(PopularFood("Deserts", "", R.drawable.deserts))
-        listPopular.add(PopularFood("Other", "", R.drawable.other))
-        listPopular.add(PopularFood("Kids", "", R.drawable.kids))
+        listPopular.add(CategoriesFood("Chicken", "", R.drawable.chicken))
+        listPopular.add(CategoriesFood("Burgers", "", R.drawable.bossburger))
+        listPopular.add(CategoriesFood("Spinners", "", R.drawable.spinner))
+        listPopular.add(CategoriesFood("Pizza", "", R.drawable.hawaiian))
+        listPopular.add(CategoriesFood("Drinks", "", R.drawable.drinks))
+        listPopular.add(CategoriesFood("Appertizers and Combo", "", R.drawable.appr))
+        listPopular.add(CategoriesFood("Deserts", "", R.drawable.deserts))
+        listPopular.add(CategoriesFood("Other", "", R.drawable.other))
+        listPopular.add(CategoriesFood("Kids", "", R.drawable.kids))
     }
 }

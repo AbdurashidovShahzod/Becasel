@@ -10,12 +10,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import uz.unzosoft.fastfoodbecasel.R
 import uz.unzosoft.fastfoodbecasel.ui.SeconFoodActivity
-import uz.unzosoft.fastfoodbecasel.ui.model.PopularFood
+import uz.unzosoft.fastfoodbecasel.ui.model.CategoriesFood
 
 
-class FoodAdapter(var context: Context, popularFoodList: List<PopularFood>) :
+class FoodAdapter(var context: Context, popularFoodList: List<CategoriesFood>) :
     RecyclerView.Adapter<FoodAdapter.PopularFoodViewHolder>() {
-    var popularFoodList: List<PopularFood> = popularFoodList
+    var popularFoodList: List<CategoriesFood> = popularFoodList
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopularFoodViewHolder {
         val view: View =
             LayoutInflater.from(context).inflate(R.layout.popular_food_row_item, parent, false)

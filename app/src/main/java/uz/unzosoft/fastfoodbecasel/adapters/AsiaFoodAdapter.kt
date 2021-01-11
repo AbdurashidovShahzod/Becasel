@@ -8,11 +8,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import uz.unzosoft.fastfoodbecasel.R
-import uz.unzosoft.fastfoodbecasel.ui.model.AsiaFood
+import uz.unzosoft.fastfoodbecasel.ui.model.LoookFood
 
-class AsiaFoodAdapter(var context: Context, asiaFoodList: List<AsiaFood>) :
+class AsiaFoodAdapter(var context: Context, asiaFoodList: List<LoookFood>) :
     RecyclerView.Adapter<AsiaFoodAdapter.AsiaFoodViewHolder>() {
-    var asiaFoodList: List<AsiaFood> = asiaFoodList
+    var asiaFoodList: List<LoookFood> = asiaFoodList
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int

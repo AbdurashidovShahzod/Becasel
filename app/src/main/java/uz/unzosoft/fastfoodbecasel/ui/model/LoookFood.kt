@@ -1,6 +1,6 @@
 package uz.unzosoft.fastfoodbecasel.ui.model
 
-data class AsiaFood(
+data class LoookFood(
     var name: String,
     var price: String,
     var imageUrl: Int,
