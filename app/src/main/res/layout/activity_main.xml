@@ -42,19 +42,18 @@
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/mygirlbook"
-            />
+            app:srcCompat="@drawable/mygirlbook" />
     </androidx.cardview.widget.CardView>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cc"
-        app:layout_constraintEnd_toStartOf="@+id/cc"
-        app:layout_constraintTop_toTopOf="@+id/cc"
-        app:srcCompat="@drawable/ic_notification" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cc"
+            app:layout_constraintEnd_toStartOf="@+id/cc"
+            app:layout_constraintTop_toTopOf="@+id/cc"
+            app:srcCompat="@drawable/ic_shopping_cart" />
 
     <EditText
         android:id="@+id/editText"

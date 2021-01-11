@@ -58,7 +58,7 @@
             android:layout_marginTop="8dp"
             android:fontFamily="@font/regular"
             android:text="TextView"
-            android:textColor="#F06941"
+            android:textColor="#E91E63"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/food_image"
             app:layout_constraintTop_toTopOf="parent" />
