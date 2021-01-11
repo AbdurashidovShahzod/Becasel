@@ -3,13 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFEB3B">
+    android:background="#F5446C">
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/imageView1"
         android:layout_width="250dp"
         android:layout_height="230dp"
-        app:riv_corner_radius="15dp"
         android:scaleType="centerCrop"
         android:src="@drawable/on_b_2"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,14 +16,15 @@
         app:layout_constraintHorizontal_bias=".3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".3" />
+        app:layout_constraintVertical_bias=".3"
+        app:riv_corner_radius="15dp" />
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="Sizling bites"
+        android:text="Enjoy your favorite dishes"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -42,27 +42,14 @@
         android:text="Skip"
         android:textColor="@color/black"
         android:textSize="16sp"
-        android:visibility="invisible"
         android:textStyle="bold"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@id/textView1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1"
         app:layout_constraintStart_toEndOf="@id/textView1"
         app:layout_constraintTop_toTopOf="@id/textView1" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:text="Fresh"
-        android:textSize="42sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="@id/imageView1"
-        app:layout_constraintTop_toBottomOf="@id/imageView1"
-        app:layout_constraintVertical_bias="0" />
 
     <TextView
         android:id="@+id/textView3"
@@ -76,8 +63,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="@id/textView2"
-        app:layout_constraintTop_toBottomOf="@id/textView2"
+        app:layout_constraintStart_toStartOf="@id/imageView1"
+        app:layout_constraintTop_toBottomOf="@id/imageView1"
         app:layout_constraintVertical_bias="0" />
 
     <TextView
@@ -85,7 +72,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="5dp"
-        android:text="Everthing you willex experince will be absoluety"
+        android:text="You order has been placed!You will recieve an email receipt shortly"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,6 +92,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="@id/textView4"
         app:layout_constraintTop_toBottomOf="@id/textView4"
         app:layout_constraintVertical_bias=".6" />

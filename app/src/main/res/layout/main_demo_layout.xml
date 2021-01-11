@@ -238,7 +238,7 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
-        android:background="@color/white"
+        android:background="@drawable/bottom_nav_bg"
         android:backgroundTint="#FFEB3B"
         android:fadingEdge="horizontal"
         android:padding="5dp"
