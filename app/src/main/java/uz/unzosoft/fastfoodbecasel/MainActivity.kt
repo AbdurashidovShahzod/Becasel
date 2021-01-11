@@ -5,22 +5,26 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import uz.unzosoft.fastfoodbecasel.adapters.FoodAdapter
-import uz.unzosoft.fastfoodbecasel.adapters.AsiaFoodAdapter
+import uz.unzosoft.fastfoodbecasel.adapters.CategoriesAdapter
 import uz.unzosoft.fastfoodbecasel.ui.SeconFoodActivity
 import uz.unzosoft.fastfoodbecasel.ui.model.LoookFood
 import uz.unzosoft.fastfoodbecasel.ui.model.CategoriesFood
 
 class MainActivity : AppCompatActivity() {
-    lateinit var asiaFoodAdapter: AsiaFoodAdapter
+    lateinit var asiaFoodAdapter: CategoriesAdapter
     lateinit var foodAdapter: FoodAdapter
-    var listPopular = ArrayList<CategoriesFood>()
+    private var listPopular = ArrayList<CategoriesFood>()
 
-    var listBurger = ArrayList<LoookFood>()
-    var listChicken = ArrayList<LoookFood>()
-    var listSpinners = ArrayList<LoookFood>()
-    var listPizza = ArrayList<LoookFood>()
-    var listDrinks = ArrayList<LoookFood>()
-    var listAppetizersCombo = ArrayList<LoookFood>()
+    // Food lists
+    private var listBurger = ArrayList<LoookFood>()
+    private var listChicken = ArrayList<LoookFood>()
+    private var listSpinners = ArrayList<LoookFood>()
+    private var listPizza = ArrayList<LoookFood>()
+    private var listDrinks = ArrayList<LoookFood>()
+    private var listAppetizersCombo = ArrayList<LoookFood>()
+    private var listDesert = ArrayList<LoookFood>()
+    private var listOther = ArrayList<LoookFood>()
+    private var listKids = ArrayList<LoookFood>()
 
 
     override
@@ -29,10 +33,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initData()
 
-        asiaFoodAdapter = AsiaFoodAdapter(this, listDrinks)
+        asiaFoodAdapter = CategoriesAdapter(this, listKids)
         foodAdapter = FoodAdapter(this, listPopular)
         popular_recycler.adapter = foodAdapter
         asia_recycler.adapter = asiaFoodAdapter
+
         textAll.setOnClickListener {
             startActivity(Intent(this, SeconFoodActivity::class.java))
         }
@@ -491,20 +496,108 @@ class MainActivity : AppCompatActivity() {
         /**
          * Appetizers and Combo food
          */
-        listAppetizersCombo.add(LoookFood("FRIES","9 000 UZS",R.drawable.appr,"5.0","Becasel"))
-        listAppetizersCombo.add(LoookFood("WINGS","16 000 UZS",R.drawable.appr,"5.0","Becasel"))
-        listAppetizersCombo.add(LoookFood("STRIPS","16 000 UZS",R.drawable.appr,"5.0","Becasel"))
-        listAppetizersCombo.add(LoookFood("BITES","9 000 UZS",R.drawable.appr,"5.0","Becasel"))
-        listAppetizersCombo.add(LoookFood("MUSHROOMS 6 PCS","9 000 UZS",R.drawable.appr,"5.0","Becasel"))
-        listAppetizersCombo.add(LoookFood("1 WINGS","5 000 UZS",R.drawable.appr,"5.0","Becasel"))
-        listAppetizersCombo.add(LoookFood("1 STRIPS","5 000 UZS",R.drawable.appr,"5.0","Becasel"))
-        listAppetizersCombo.add(LoookFood("CHEESE NUGGETS","11 000 UZS",R.drawable.appr,"5.0","Becasel"))
-        listAppetizersCombo.add(LoookFood("COMBO","12 000 UZS",R.drawable.appr,"5.0","Becasel"))
-        listAppetizersCombo.add(LoookFood("WICKED COMBO (strips)","18 000 UZS",R.drawable.appr,"5.0","Becasel"))
-        listAppetizersCombo.add(LoookFood("WICKED COMBO (wings)","18 000 UZS",R.drawable.appr,"5.0","Becasel"))
+        listAppetizersCombo.add(LoookFood("FRIES", "9 000 UZS", R.drawable.appr, "5.0", "Becasel"))
+        listAppetizersCombo.add(LoookFood("WINGS", "16 000 UZS", R.drawable.appr, "5.0", "Becasel"))
+        listAppetizersCombo.add(
+            LoookFood(
+                "STRIPS",
+                "16 000 UZS",
+                R.drawable.appr,
+                "5.0",
+                "Becasel"
+            )
+        )
+        listAppetizersCombo.add(LoookFood("BITES", "9 000 UZS", R.drawable.appr, "5.0", "Becasel"))
+        listAppetizersCombo.add(
+            LoookFood(
+                "MUSHROOMS 6 PCS",
+                "9 000 UZS",
+                R.drawable.appr,
+                "5.0",
+                "Becasel"
+            )
+        )
+        listAppetizersCombo.add(
+            LoookFood(
+                "1 WINGS",
+                "5 000 UZS",
+                R.drawable.appr,
+                "5.0",
+                "Becasel"
+            )
+        )
+        listAppetizersCombo.add(
+            LoookFood(
+                "1 STRIPS",
+                "5 000 UZS",
+                R.drawable.appr,
+                "5.0",
+                "Becasel"
+            )
+        )
+        listAppetizersCombo.add(
+            LoookFood(
+                "CHEESE NUGGETS",
+                "11 000 UZS",
+                R.drawable.appr,
+                "5.0",
+                "Becasel"
+            )
+        )
+        listAppetizersCombo.add(LoookFood("COMBO", "12 000 UZS", R.drawable.appr, "5.0", "Becasel"))
+        listAppetizersCombo.add(
+            LoookFood(
+                "WICKED COMBO (strips)",
+                "18 000 UZS",
+                R.drawable.appr,
+                "5.0",
+                "Becasel"
+            )
+        )
+        listAppetizersCombo.add(
+            LoookFood(
+                "WICKED COMBO (wings)",
+                "18 000 UZS",
+                R.drawable.appr,
+                "5.0",
+                "Becasel"
+            )
+        )
 
 
+        /**
+         * Desert food
+         */
+        listDesert.add(LoookFood("MILKSHAKE BANAN","16 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("MILKSHAKE KITKAT","14 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("MILKSHAKE TWIX","14 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("MILKSHAKE APPLE","14 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("MILKSHAKE STRAWBERRY","14 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("MILKSHAKE RAFFAELLO","14 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("LEMON CAKE","14 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("CHOCOLATE SOUFFLE","14 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("CHOCOTASTIC","13 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("RED WAVE","13 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("KIWIX","13 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("SAFER","10 000 UZS",R.drawable.drinks,"5.0","Becasel"))
 
-
+        /**
+         * Other food
+         */
+        listOther.add(LoookFood("COLESLAW SALAD","4 000 UZS",R.drawable.other,"5.0","Becasel"))
+        listOther.add(LoookFood("LOOOK SALAD","10 000 UZS",R.drawable.other,"5.0","Becasel"))
+        listOther.add(LoookFood("VEGGIE-FRESH SALAD","9 000 UZS",R.drawable.other,"5.0","Becasel"))
+        /**
+         * Kids meal
+         */
+    listKids.add(LoookFood("TOY","10 000 UZS",R.drawable.kids,"5.0","Becasel"))
+    listKids.add(LoookFood("KIDS MENU STRIPS BOY","28 000 UZS",R.drawable.kids,"5.0","Becasel"))
+    listKids.add(LoookFood("KIDS MENU STRIPS GIRL","28 000 UZS",R.drawable.kids,"5.0","Becasel"))
+    listKids.add(LoookFood("KIDS BURGER","11 000 UZS",R.drawable.kids,"5.0","Becasel"))
+    listKids.add(LoookFood("KIDS SPINNER","7 000 UZS",R.drawable.kids,"5.0","Becasel"))
+    listKids.add(LoookFood("KIDS MENU SPINNER GIRL","28 000 UZS",R.drawable.kids,"5.0","Becasel"))
+    listKids.add(LoookFood("KIDS MENU SPINNER BOY","28 000 UZS",R.drawable.kids,"5.0","Becasel"))
+    listKids.add(LoookFood("KIDS JUICE","3 000 UZS",R.drawable.kids,"5.0","Becasel"))
+    listKids.add(LoookFood("BABY (Heinz)","10 000 UZS",R.drawable.kids,"5.0","Becasel"))
     }
 }

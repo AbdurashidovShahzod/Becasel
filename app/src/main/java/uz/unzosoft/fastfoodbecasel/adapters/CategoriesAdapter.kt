@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import uz.unzosoft.fastfoodbecasel.R
 import uz.unzosoft.fastfoodbecasel.ui.model.LoookFood
 
-class AsiaFoodAdapter(var context: Context, asiaFoodList: List<LoookFood>) :
-    RecyclerView.Adapter<AsiaFoodAdapter.AsiaFoodViewHolder>() {
+class CategoriesAdapter(var context: Context, asiaFoodList: List<LoookFood>) :
+    RecyclerView.Adapter<CategoriesAdapter.AsiaFoodViewHolder>() {
     var asiaFoodList: List<LoookFood> = asiaFoodList
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -19,11 +19,11 @@ class AsiaFoodAdapter(var context: Context, asiaFoodList: List<LoookFood>) :
     ): AsiaFoodViewHolder {
         val view: View =
             LayoutInflater.from(context).inflate(R.layout.asia_food_row_item, parent, false)
-        return AsiaFoodAdapter.AsiaFoodViewHolder(view)
+        return CategoriesAdapter.AsiaFoodViewHolder(view)
     }
 
     override fun onBindViewHolder(
-        holder: AsiaFoodAdapter.AsiaFoodViewHolder,
+        holder: CategoriesAdapter.AsiaFoodViewHolder,
         position: Int
     ) {
         holder.foodImage.setImageResource(asiaFoodList[position].imageUrl)
