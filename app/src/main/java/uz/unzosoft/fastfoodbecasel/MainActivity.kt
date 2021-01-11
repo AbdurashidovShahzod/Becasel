@@ -33,10 +33,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initData()
 
-        asiaFoodAdapter = CategoriesAdapter(this, listKids)
         foodAdapter = FoodAdapter(this, listPopular)
-        popular_recycler.adapter = foodAdapter
+        foodAdapter.setOnClickListener {
+            when(it){
+                0-> asiaFoodAdapter = CategoriesAdapter(this, listChicken)
+                1-> asiaFoodAdapter = CategoriesAdapter(this, listBurger)
+                2-> asiaFoodAdapter = CategoriesAdapter(this, listSpinners)
+                3-> asiaFoodAdapter = CategoriesAdapter(this, listPizza)
+                4-> asiaFoodAdapter = CategoriesAdapter(this, listDrinks)
+                5-> asiaFoodAdapter = CategoriesAdapter(this, listAppetizersCombo)
+                6-> asiaFoodAdapter = CategoriesAdapter(this, listDesert)
+                7-> asiaFoodAdapter = CategoriesAdapter(this, listOther)
+                8-> asiaFoodAdapter = CategoriesAdapter(this, listKids)
+            }
         asia_recycler.adapter = asiaFoodAdapter
+        }
+        popular_recycler.adapter = foodAdapter
 
         textAll.setOnClickListener {
             startActivity(Intent(this, SeconFoodActivity::class.java))
