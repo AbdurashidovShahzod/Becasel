@@ -6,13 +6,13 @@
     android:layout_width="wrap_content"
     app:cardCornerRadius="15dp"
     android:elevation="5dp"
+    android:id="@+id/item"
     android:layout_marginStart="16dp"
     android:layout_height="wrap_content" >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-
 
         <ImageView
             android:id="@+id/food_image"
@@ -54,5 +54,15 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/name"
             app:layout_constraintTop_toTopOf="@+id/name" />
+        <FrameLayout
+            android:id="@+id/itemSelect"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:alpha="0.2"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.cardview.widget.CardView>

@@ -41,6 +41,13 @@ class MainActivity : AppCompatActivity() {
         textAll.setOnClickListener {
             startActivity(Intent(this, SeconFoodActivity::class.java))
         }
+      /*  foodAdapter.setOnClickListener {
+            when (it) {
+
+            }
+        }
+
+       */
     }
 
     private fun initData() {

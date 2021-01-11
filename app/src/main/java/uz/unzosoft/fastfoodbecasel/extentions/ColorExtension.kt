@@ -1,4 +1,4 @@
-package uz.unzosoft.fastfoodbecasel.ui
+package uz.unzosoft.fastfoodbecasel.extentions
 
 import android.graphics.Color
 
