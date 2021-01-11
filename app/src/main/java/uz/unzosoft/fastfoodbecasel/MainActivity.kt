@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initData()
 
-        asiaFoodAdapter = CategoriesAdapter(this, listKids)
+        asiaFoodAdapter = CategoriesAdapter(this, listChicken)
         foodAdapter = FoodAdapter(this, listPopular)
         popular_recycler.adapter = foodAdapter
         asia_recycler.adapter = asiaFoodAdapter
