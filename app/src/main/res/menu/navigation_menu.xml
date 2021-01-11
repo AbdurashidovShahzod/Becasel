@@ -1,4 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-</menu>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <item
+            android:id="@+id/nav_near"
+            android:icon="@drawable/ic_home_24"
+            android:title="Home"
+            app:cnb_iconColor="#2196F3"
+            />
+
+        <item
+            android:id="@+id/nav_new_chat"
+            android:icon="@drawable/ic_location_24"
+            android:title="Location"
+            app:cnb_iconColor="#F44336"/>
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profile"
+            android:title="Profile"
+            app:cnb_iconColor="#4CAF50"/>
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="Settings"
+            app:cnb_iconColor="#FF9800"/>
+
+    </menu>
+<!--    <item-->
+<!--        android:id="nav_near1"-->
+<!--        android:icon="@drawable/ic_home_24"-->
+<!--        android:title="Home"-->
+<!--        app:cnb_iconColor="@color/white"/>-->
+<!--    <item-->
+<!--        android:id="nav_delivery"-->
+<!--        android:icon="@drawable/ic_location"-->
+<!--        android:title="Delivery"-->
+<!--        app:cnb_iconColor="@color/white"/>-->
+<!--    <item-->
+<!--        android:id="nav_basket"-->
+<!--        android:icon="@drawable/ic_shopping_cart"-->
+<!--        android:title="Basket"-->
+<!--        app:cnb_iconColor="@color/white"/>-->
+<!--    <item-->
+<!--        android:id="nav_proile"-->
+<!--        android:icon="@drawable/profile"-->
+<!--        android:title="Profile"-->
+<!--        app:cnb_iconColor="@color/white"/>-->
