@@ -41,12 +41,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="30dp"
-        android:text="Skip"
         android:background="#00000000"
+        android:clickable="true"
+        android:text="Skip"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="@id/textView1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1"
@@ -59,8 +59,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"
         android:text="Fresh"
-        android:textSize="42sp"
         android:textColor="@color/white"
+        android:textSize="42sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
@@ -88,9 +88,9 @@
         android:id="@+id/textView4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:textColor="@color/white"
         android:layout_marginTop="5dp"
         android:text="Everthing you willex experince will be absoluety"
+        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,6 +102,7 @@
         app:layout_constraintWidth_percent=".6" />
 
     <ImageView
+        android:id="@+id/tab"
         android:layout_width="60dp"
         android:layout_height="10dp"
         android:layout_marginLeft="5dp"
@@ -113,6 +114,23 @@
         app:layout_constraintStart_toStartOf="@id/textView4"
         app:layout_constraintTop_toBottomOf="@id/textView4"
         app:layout_constraintVertical_bias=".6" />
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:background="#00000000"
+        android:clickable="true"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/tab"
+        app:layout_constraintRight_toRightOf="@id/skip"
+        app:layout_constraintBottom_toBottomOf="@id/tab"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,7 +20,9 @@ class Fragment3 : Fragment(R.layout.fragment_on_boarding3) {
         super.onViewCreated(view, savedInstanceState)
         skip.setOnClickListener {
             startActivity(Intent(this.context, MainActivity::class.java))
-            Toast.makeText(this.context, "Create", Toast.LENGTH_SHORT).show()
+        }
+        nextBtn.setOnClickListener {
+            startActivity(Intent(this.context, MainActivity::class.java))
         }
     }
 
