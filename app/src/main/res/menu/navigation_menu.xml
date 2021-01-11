@@ -17,15 +17,15 @@
 
         <item
             android:id="@+id/nav_profile"
-            android:icon="@drawable/profile"
-            android:title="Profile"
-            app:cnb_iconColor="#4CAF50"/>
+            android:icon="@drawable/ic_shopping_cart"
+            android:title="Shop"
+            app:cnb_iconColor="#55016C"/>
 
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_baseline_settings_24"
             android:title="Settings"
-            app:cnb_iconColor="#FF9800"/>
+            app:cnb_iconColor="#FF5722"/>
 
     </menu>
 <!--    <item-->
