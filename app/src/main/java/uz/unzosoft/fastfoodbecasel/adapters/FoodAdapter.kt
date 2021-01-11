@@ -41,7 +41,9 @@ class FoodAdapter(private var context: Context, private var popularFoodList: Lis
 
             }
         }
-        listener?.invoke(position)
+        if (index>=0){
+        listener?.invoke(index)
+        }
     }
 
     override fun getItemCount(): Int {

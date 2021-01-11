@@ -3,6 +3,7 @@ package uz.unzosoft.fastfoodbecasel
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import uz.unzosoft.fastfoodbecasel.adapters.FoodAdapter
 import uz.unzosoft.fastfoodbecasel.adapters.CategoriesAdapter
@@ -11,7 +12,7 @@ import uz.unzosoft.fastfoodbecasel.ui.model.LoookFood
 import uz.unzosoft.fastfoodbecasel.ui.model.CategoriesFood
 
 class MainActivity : AppCompatActivity() {
-    lateinit var asiaFoodAdapter: CategoriesAdapter
+    private lateinit var asiaFoodAdapter: CategoriesAdapter
     lateinit var foodAdapter: FoodAdapter
     private var listPopular = ArrayList<CategoriesFood>()
 
@@ -36,12 +37,8 @@ class MainActivity : AppCompatActivity() {
 
         foodAdapter = FoodAdapter(this, listPopular)
         popular_recycler.adapter = foodAdapter
-        asia_recycler.adapter = asiaFoodAdapter
-
-        textAll.setOnClickListener {
-            startActivity(Intent(this, SeconFoodActivity::class.java))
-        }
         foodAdapter.setOnClickListener {
+            Toast.makeText(this,"clickiiiii $it",Toast.LENGTH_SHORT).show()
             when (it) {
                 0 -> asiaFoodAdapter = CategoriesAdapter(this, listChicken)
                 1 -> asiaFoodAdapter = CategoriesAdapter(this, listBurger)
@@ -53,6 +50,11 @@ class MainActivity : AppCompatActivity() {
                 7 -> asiaFoodAdapter = CategoriesAdapter(this, listOther)
                 8 -> asiaFoodAdapter = CategoriesAdapter(this, listKids)
             }
+        asia_recycler.adapter = asiaFoodAdapter
+        }
+
+        textAll.setOnClickListener {
+            startActivity(Intent(this, SeconFoodActivity::class.java))
         }
 
 
