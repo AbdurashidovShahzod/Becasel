@@ -112,7 +112,9 @@ class MainActivity : AppCompatActivity() {
         )
 
 
-
+        /**
+         * Categories
+         */
         listPopular.add(CategoriesFood("Chicken", "", R.drawable.chicken))
         listPopular.add(CategoriesFood("Burgers", "", R.drawable.bossburger))
         listPopular.add(CategoriesFood("Spinners", "", R.drawable.spinner))
@@ -122,5 +124,127 @@ class MainActivity : AppCompatActivity() {
         listPopular.add(CategoriesFood("Deserts", "", R.drawable.deserts))
         listPopular.add(CategoriesFood("Other", "", R.drawable.other))
         listPopular.add(CategoriesFood("Kids", "", R.drawable.kids))
+
+        /**
+         * Chicken food
+         */
+        listChicken.add(
+            LoookFood(
+                "DINNER MEAL NORMAL",
+                "29 000 UZS",
+                R.drawable.spinner,
+                "5.0",
+                "Becausel",
+            )
+        )
+        listChicken.add(
+            LoookFood(
+                "DINNER MEAL NORMAL",
+                "29 000 UZS",
+                R.drawable.spinner,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listChicken.add(
+            LoookFood(
+                "DINNER MEAL NORMAL",
+                "29 000 UZS",
+                R.drawable.spinner,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listChicken.add(
+            LoookFood(
+                "DINNER MEAL NORMAL",
+                "29 000 UZS",
+                R.drawable.spinner,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listChicken.add(
+            LoookFood(
+                "DINNER MEAL NORMAL",
+                "29 000 UZS",
+                R.drawable.spinner,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listChicken.add(
+            LoookFood(
+                "DINNER MEAL NORMAL",
+                "29 000 UZS",
+                R.drawable.spinner,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listChicken.add(
+            LoookFood(
+                "DINNER MEAL NORMAL",
+                "29 000 UZS",
+                R.drawable.spinner,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listChicken.add(
+            LoookFood(
+                "DINNER MEAL NORMAL",
+                "29 000 UZS",
+                R.drawable.spinner,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listChicken.add(
+            LoookFood(
+                "DINNER MEAL NORMAL",
+                "29 000 UZS",
+                R.drawable.spinner,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listChicken.add(
+            LoookFood(
+                "DINNER MEAL NORMAL",
+                "29 000 UZS",
+                R.drawable.spinner,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listChicken.add(
+            LoookFood(
+                "DINNER MEAL NORMAL",
+                "29 000 UZS",
+                R.drawable.spinner,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listChicken.add(
+            LoookFood(
+                "DINNER MEAL NORMAL",
+                "29 000 UZS",
+                R.drawable.spinner,
+                "5.0",
+                "Becausel"
+            )
+        )
+        listChicken.add(
+            LoookFood(
+                "DINNER MEAL NORMAL",
+                "29 000 UZS",
+                R.drawable.spinner,
+                "5.0",
+                "Becausel"
+            )
+        )
+
     }
 }
