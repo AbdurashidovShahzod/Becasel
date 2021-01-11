@@ -1,7 +1,6 @@
 package uz.unzosoft.fastfoodbecasel.adapters
 
 import android.content.Context
-import android.content.Intent
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
@@ -10,15 +9,15 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.popular_food_row_item.view.*
 import uz.unzosoft.fastfoodbecasel.R
-import uz.unzosoft.fastfoodbecasel.ui.SeconFoodActivity
+import uz.unzosoft.fastfoodbecasel.extentions.SingleBlock
 import uz.unzosoft.fastfoodbecasel.ui.model.CategoriesFood
 
 
-class FoodAdapter(var context: Context, var popularFoodList: List<CategoriesFood>) :
+class FoodAdapter(private var context: Context, private var popularFoodList: List<CategoriesFood>) :
     RecyclerView.Adapter<FoodAdapter.PopularFoodViewHolder>() {
-    var  index=-1
+    private var  index=-1
+    private var listener: SingleBlock<Int>? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopularFoodViewHolder {
         val view: View =
             LayoutInflater.from(context).inflate(R.layout.popular_food_row_item, parent, false)
@@ -42,10 +41,15 @@ class FoodAdapter(var context: Context, var popularFoodList: List<CategoriesFood
 
             }
         }
+        listener?.invoke(position)
     }
 
     override fun getItemCount(): Int {
         return popularFoodList.size
+    }
+    fun setOnClickListener(block: SingleBlock<Int>) {
+        notifyDataSetChanged()
+        listener = block
     }
 
     class PopularFoodViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
