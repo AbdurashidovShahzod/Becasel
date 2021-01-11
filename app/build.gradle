@@ -53,4 +53,8 @@ dependencies {
      * Circle image
      */
     compile 'com.makeramen:roundedimageview:2.3.0'
+    /**
+     * Bootom navigation
+     */
+    implementation 'com.ismaeldivita.chipnavigation:chip-navigation-bar:1.3.4'
 }

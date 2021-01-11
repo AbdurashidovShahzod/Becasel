@@ -3,7 +3,6 @@ package uz.unzosoft.fastfoodbecasel
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import uz.unzosoft.fastfoodbecasel.adapters.FoodAdapter
 import uz.unzosoft.fastfoodbecasel.adapters.CategoriesAdapter
@@ -12,7 +11,7 @@ import uz.unzosoft.fastfoodbecasel.ui.model.LoookFood
 import uz.unzosoft.fastfoodbecasel.ui.model.CategoriesFood
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var asiaFoodAdapter: CategoriesAdapter
+    lateinit var asiaFoodAdapter: CategoriesAdapter
     lateinit var foodAdapter: FoodAdapter
     private var listPopular = ArrayList<CategoriesFood>()
 
@@ -34,30 +33,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initData()
 
-
+        asiaFoodAdapter = CategoriesAdapter(this, listKids)
         foodAdapter = FoodAdapter(this, listPopular)
         popular_recycler.adapter = foodAdapter
-        foodAdapter.setOnClickListener {
-            Toast.makeText(this,"clickiiiii $it",Toast.LENGTH_SHORT).show()
-            when (it) {
-                0 -> asiaFoodAdapter = CategoriesAdapter(this, listChicken)
-                1 -> asiaFoodAdapter = CategoriesAdapter(this, listBurger)
-                2 -> asiaFoodAdapter = CategoriesAdapter(this, listSpinners)
-                3 -> asiaFoodAdapter = CategoriesAdapter(this, listPizza)
-                4 -> asiaFoodAdapter = CategoriesAdapter(this, listDrinks)
-                5 -> asiaFoodAdapter = CategoriesAdapter(this, listAppetizersCombo)
-                6 -> asiaFoodAdapter = CategoriesAdapter(this, listDesert)
-                7 -> asiaFoodAdapter = CategoriesAdapter(this, listOther)
-                8 -> asiaFoodAdapter = CategoriesAdapter(this, listKids)
-            }
         asia_recycler.adapter = asiaFoodAdapter
-        }
 
         textAll.setOnClickListener {
             startActivity(Intent(this, SeconFoodActivity::class.java))
         }
-
-
     }
 
     private fun initData() {
@@ -585,132 +568,36 @@ class MainActivity : AppCompatActivity() {
         /**
          * Desert food
          */
-        listDesert.add(
-            LoookFood(
-                "MILKSHAKE BANAN",
-                "16 000 UZS",
-                R.drawable.drinks,
-                "5.0",
-                "Becasel"
-            )
-        )
-        listDesert.add(
-            LoookFood(
-                "MILKSHAKE KITKAT",
-                "14 000 UZS",
-                R.drawable.drinks,
-                "5.0",
-                "Becasel"
-            )
-        )
-        listDesert.add(
-            LoookFood(
-                "MILKSHAKE TWIX",
-                "14 000 UZS",
-                R.drawable.drinks,
-                "5.0",
-                "Becasel"
-            )
-        )
-        listDesert.add(
-            LoookFood(
-                "MILKSHAKE APPLE",
-                "14 000 UZS",
-                R.drawable.drinks,
-                "5.0",
-                "Becasel"
-            )
-        )
-        listDesert.add(
-            LoookFood(
-                "MILKSHAKE STRAWBERRY",
-                "14 000 UZS",
-                R.drawable.drinks,
-                "5.0",
-                "Becasel"
-            )
-        )
-        listDesert.add(
-            LoookFood(
-                "MILKSHAKE RAFFAELLO",
-                "14 000 UZS",
-                R.drawable.drinks,
-                "5.0",
-                "Becasel"
-            )
-        )
-        listDesert.add(LoookFood("LEMON CAKE", "14 000 UZS", R.drawable.drinks, "5.0", "Becasel"))
-        listDesert.add(
-            LoookFood(
-                "CHOCOLATE SOUFFLE",
-                "14 000 UZS",
-                R.drawable.drinks,
-                "5.0",
-                "Becasel"
-            )
-        )
-        listDesert.add(LoookFood("CHOCOTASTIC", "13 000 UZS", R.drawable.drinks, "5.0", "Becasel"))
-        listDesert.add(LoookFood("RED WAVE", "13 000 UZS", R.drawable.drinks, "5.0", "Becasel"))
-        listDesert.add(LoookFood("KIWIX", "13 000 UZS", R.drawable.drinks, "5.0", "Becasel"))
-        listDesert.add(LoookFood("SAFER", "10 000 UZS", R.drawable.drinks, "5.0", "Becasel"))
+        listDesert.add(LoookFood("MILKSHAKE BANAN","16 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("MILKSHAKE KITKAT","14 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("MILKSHAKE TWIX","14 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("MILKSHAKE APPLE","14 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("MILKSHAKE STRAWBERRY","14 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("MILKSHAKE RAFFAELLO","14 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("LEMON CAKE","14 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("CHOCOLATE SOUFFLE","14 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("CHOCOTASTIC","13 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("RED WAVE","13 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("KIWIX","13 000 UZS",R.drawable.drinks,"5.0","Becasel"))
+        listDesert.add(LoookFood("SAFER","10 000 UZS",R.drawable.drinks,"5.0","Becasel"))
 
         /**
          * Other food
          */
-        listOther.add(LoookFood("COLESLAW SALAD", "4 000 UZS", R.drawable.other, "5.0", "Becasel"))
-        listOther.add(LoookFood("LOOOK SALAD", "10 000 UZS", R.drawable.other, "5.0", "Becasel"))
-        listOther.add(
-            LoookFood(
-                "VEGGIE-FRESH SALAD",
-                "9 000 UZS",
-                R.drawable.other,
-                "5.0",
-                "Becasel"
-            )
-        )
+        listOther.add(LoookFood("COLESLAW SALAD","4 000 UZS",R.drawable.other,"5.0","Becasel"))
+        listOther.add(LoookFood("LOOOK SALAD","10 000 UZS",R.drawable.other,"5.0","Becasel"))
+        listOther.add(LoookFood("VEGGIE-FRESH SALAD","9 000 UZS",R.drawable.other,"5.0","Becasel"))
         /**
          * Kids meal
          */
-        listKids.add(LoookFood("TOY", "10 000 UZS", R.drawable.kids, "5.0", "Becasel"))
-        listKids.add(
-            LoookFood(
-                "KIDS MENU STRIPS BOY",
-                "28 000 UZS",
-                R.drawable.kids,
-                "5.0",
-                "Becasel"
-            )
-        )
-        listKids.add(
-            LoookFood(
-                "KIDS MENU STRIPS GIRL",
-                "28 000 UZS",
-                R.drawable.kids,
-                "5.0",
-                "Becasel"
-            )
-        )
-        listKids.add(LoookFood("KIDS BURGER", "11 000 UZS", R.drawable.kids, "5.0", "Becasel"))
-        listKids.add(LoookFood("KIDS SPINNER", "7 000 UZS", R.drawable.kids, "5.0", "Becasel"))
-        listKids.add(
-            LoookFood(
-                "KIDS MENU SPINNER GIRL",
-                "28 000 UZS",
-                R.drawable.kids,
-                "5.0",
-                "Becasel"
-            )
-        )
-        listKids.add(
-            LoookFood(
-                "KIDS MENU SPINNER BOY",
-                "28 000 UZS",
-                R.drawable.kids,
-                "5.0",
-                "Becasel"
-            )
-        )
-        listKids.add(LoookFood("KIDS JUICE", "3 000 UZS", R.drawable.kids, "5.0", "Becasel"))
-        listKids.add(LoookFood("BABY (Heinz)", "10 000 UZS", R.drawable.kids, "5.0", "Becasel"))
+    listKids.add(LoookFood("TOY","10 000 UZS",R.drawable.kids,"5.0","Becasel"))
+    listKids.add(LoookFood("KIDS MENU STRIPS BOY","28 000 UZS",R.drawable.kids,"5.0","Becasel"))
+    listKids.add(LoookFood("KIDS MENU STRIPS GIRL","28 000 UZS",R.drawable.kids,"5.0","Becasel"))
+    listKids.add(LoookFood("KIDS BURGER","11 000 UZS",R.drawable.kids,"5.0","Becasel"))
+    listKids.add(LoookFood("KIDS SPINNER","7 000 UZS",R.drawable.kids,"5.0","Becasel"))
+    listKids.add(LoookFood("KIDS MENU SPINNER GIRL","28 000 UZS",R.drawable.kids,"5.0","Becasel"))
+    listKids.add(LoookFood("KIDS MENU SPINNER BOY","28 000 UZS",R.drawable.kids,"5.0","Becasel"))
+    listKids.add(LoookFood("KIDS JUICE","3 000 UZS",R.drawable.kids,"5.0","Becasel"))
+    listKids.add(LoookFood("BABY (Heinz)","10 000 UZS",R.drawable.kids,"5.0","Becasel"))
     }
 }
