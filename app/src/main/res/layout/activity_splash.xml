@@ -7,27 +7,18 @@
     android:background="@drawable/bottom_nav_bg"
     tools:context=".ui.SplashActivity">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guid"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1"/>
+
+
     <ImageView
-        app:layout_constraintTop_toBottomOf="@id/guid"
+        android:id="@+id/splashImage"
         android:layout_width="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="paren"
-        app:layout_constraintBottom_toTopOf="@id/guid2"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:src="@drawable/on_b_3" />
+        android:src="@drawable/on_b_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guid2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
