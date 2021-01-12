@@ -22,11 +22,8 @@ class SplashActivity : AppCompatActivity() {
         animationSplash = AnimationUtils.loadAnimation(this, R.anim.splash_anim)
         splashImage.animation = animationSplash
 
-
-
         handler = Handler()
         handler.postDelayed({
-
             if (MySharedPreference.onBoard == false) {
                 MySharedPreference.onBoard = true
                 startActivity(Intent(this, IntroductoryActivity::class.java))
