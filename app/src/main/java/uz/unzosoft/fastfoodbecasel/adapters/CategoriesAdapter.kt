@@ -19,7 +19,7 @@ class CategoriesAdapter(var context: Context, var asiaFoodList: List<LoookFood>)
         viewType: Int
     ): CategoriesFood {
         val view: View =
-            LayoutInflater.from(context).inflate(R.layout.asia_food_row_item, parent, false)
+            LayoutInflater.from(context).inflate(R.layout.food_item, parent, false)
         return CategoriesFood(view)
     }
 

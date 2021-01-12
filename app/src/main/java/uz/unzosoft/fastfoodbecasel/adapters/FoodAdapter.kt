@@ -20,7 +20,7 @@ class FoodAdapter(private var context: Context, private var popularFoodList: Lis
     private var listener: SingleBlock<Int>? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FastFoodMain {
         val view: View =
-            LayoutInflater.from(context).inflate(R.layout.popular_food_row_item, parent, false)
+            LayoutInflater.from(context).inflate(R.layout.categories_food_item, parent, false)
         return FastFoodMain(view)
     }
 

@@ -23,7 +23,7 @@
             android:adjustViewBounds="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/asiafood1" />
+            app:srcCompat="@drawable/spinner" />
 
         <TextView
             android:id="@+id/name"
