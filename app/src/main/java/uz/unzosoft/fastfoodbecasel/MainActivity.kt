@@ -334,7 +334,7 @@ class MainActivity : AppCompatActivity() {
             LoookFood(
                 "PIZZA SUPREME",
                 "39 000 UZS",
-                R.drawable.popularfood3,
+                R.drawable.hawaiian,
                 "5.0",
                 "Becasel"
             )
@@ -343,7 +343,7 @@ class MainActivity : AppCompatActivity() {
             LoookFood(
                 "PIZZA PEPPERONI",
                 "29 000 UZS",
-                R.drawable.popularfood3,
+                R.drawable.hawaiian,
                 "5.0",
                 "Becasel"
             )
@@ -352,7 +352,7 @@ class MainActivity : AppCompatActivity() {
             LoookFood(
                 "PIZZA STEAK",
                 "49 000 UZS",
-                R.drawable.popularfood3,
+                R.drawable.hawaiian,
                 "5.0",
                 "Becasel"
             )
@@ -361,7 +361,7 @@ class MainActivity : AppCompatActivity() {
             LoookFood(
                 "PIZZA BBQ CHICKEN",
                 "33 000 UZS",
-                R.drawable.popularfood3,
+                R.drawable.hawaiian,
                 "5.0",
                 "Becasel"
             )
@@ -370,7 +370,7 @@ class MainActivity : AppCompatActivity() {
             LoookFood(
                 "PIZZA SPICY",
                 "32 000 UZS",
-                R.drawable.popularfood3,
+                R.drawable.hawaiian,
                 "5.0",
                 "Becasel"
             )
@@ -379,7 +379,7 @@ class MainActivity : AppCompatActivity() {
             LoookFood(
                 "PIZZA VEGETARIAN",
                 "26 000 UZS",
-                R.drawable.popularfood3,
+                R.drawable.hawaiian,
                 "5.0",
                 "Becasel"
             )
@@ -388,7 +388,7 @@ class MainActivity : AppCompatActivity() {
             LoookFood(
                 "PIZZA WHITE CHEESE",
                 "21 000 UZS",
-                R.drawable.popularfood3,
+                R.drawable.hawaiian,
                 "5.0",
                 "Becasel"
             )
@@ -397,7 +397,7 @@ class MainActivity : AppCompatActivity() {
             LoookFood(
                 "PIZZA HAWAIIAN",
                 "31 000 UZS",
-                R.drawable.popularfood3,
+                R.drawable.hawaiian,
                 "5.0",
                 "Becasel"
             )
@@ -406,7 +406,7 @@ class MainActivity : AppCompatActivity() {
             LoookFood(
                 "PIZZA MARGARITTA",
                 "25 000 UZS",
-                R.drawable.popularfood3,
+                R.drawable.hawaiian,
                 "5.0",
                 "Becasel"
             )
@@ -415,7 +415,7 @@ class MainActivity : AppCompatActivity() {
             LoookFood(
                 "PIZZA FRANKFURT",
                 "32 000 UZS",
-                R.drawable.popularfood3,
+                R.drawable.hawaiian,
                 "5.0",
                 "Becasel"
             )
@@ -731,7 +731,7 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "Ok", Toast.LENGTH_SHORT).show()
                 }
                 R.id.nav_profile -> {
-                    Toast.makeText(this, "Ok", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, SeconFoodActivity::class.java))
                 }
                 R.id.nav_settings -> {
                     Toast.makeText(this, "Ok", Toast.LENGTH_SHORT).show()

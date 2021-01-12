@@ -8,7 +8,7 @@
     tools:context=".ui.SeconFoodActivity">
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/backBtnFood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -37,6 +37,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_rectangle_344" />
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="285dp"
+        android:layout_height="285dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/backBtnFood"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="285dp"
@@ -44,8 +53,9 @@
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:srcCompat="@drawable/popularfood1" />
+        app:layout_constraintTop_toBottomOf="@+id/backBtnFood"
+        app:srcCompat="@drawable/spinner" />
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/textView3"
@@ -53,20 +63,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/semibold"
-        android:text="4.8"
+        android:text="5.0"
         android:textColor="#272670"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/textView5"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        app:layout_constraintTop_toBottomOf="@+id/card" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/semibold"
-        android:text="105"
+        android:text="98"
         android:textColor="#272670"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView3"
@@ -80,7 +90,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/semibold"
-        android:text="375"
+        android:text="301"
         android:textColor="#272670"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView5"
@@ -132,7 +142,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/regular"
-        android:text="VEGITARIAN FOOD"
+        android:text="FOOD"
         android:textColor="#FF6813"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -144,7 +154,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/semibold"
-        android:text="Float Cake Vietnam"
+        android:text="Spinner"
         android:textColor="#091020"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/textView10"
@@ -155,6 +165,7 @@
         android:layout_width="40dp"
         android:layout_height="52dp"
         android:layout_marginEnd="16dp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView10"
         app:srcCompat="@drawable/tagfree" />
@@ -211,9 +222,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/semibold"
-        android:text="$5.78"
+        android:text="29 000 USD"
         android:textColor="#272670"
-        android:textSize="24sp"
+        android:textSize="21sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView11" />
