@@ -11,7 +11,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import uz.unzosoft.fastfoodbecasel.R
 import uz.unzosoft.fastfoodbecasel.extentions.SingleBlock
-import uz.unzosoft.fastfoodbecasel.ui.model.CategoriesFood
+import uz.unzosoft.fastfoodbecasel.model.CategoriesFood
 
 
 class FoodAdapter(private var context: Context, private var popularFoodList: List<CategoriesFood>) :

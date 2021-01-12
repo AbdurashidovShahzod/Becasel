@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
-import kotlinx.android.synthetic.main.activity_demo_nav.*
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.asia_recycler
 import kotlinx.android.synthetic.main.activity_main.popular_recycler
 import kotlinx.android.synthetic.main.activity_main.textAll
@@ -14,8 +12,8 @@ import kotlinx.android.synthetic.main.main_demo_layout.*
 import uz.unzosoft.fastfoodbecasel.adapters.FoodAdapter
 import uz.unzosoft.fastfoodbecasel.adapters.CategoriesAdapter
 import uz.unzosoft.fastfoodbecasel.ui.SeconFoodActivity
-import uz.unzosoft.fastfoodbecasel.ui.model.LoookFood
-import uz.unzosoft.fastfoodbecasel.ui.model.CategoriesFood
+import uz.unzosoft.fastfoodbecasel.model.LoookFood
+import uz.unzosoft.fastfoodbecasel.model.CategoriesFood
 
 class MainActivity : AppCompatActivity() {
     lateinit var asiaFoodAdapter: CategoriesAdapter

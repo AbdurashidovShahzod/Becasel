@@ -1,4 +1,4 @@
-package uz.unzosoft.fastfoodbecasel.ui.model
+package uz.unzosoft.fastfoodbecasel.model
 
 data class LoookFood(
     var name: String,
