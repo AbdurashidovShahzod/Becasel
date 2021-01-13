@@ -62,4 +62,17 @@ dependencies {
      */
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    /**
+     * Dependencies injection Koin
+     */
+    def koin_version = '2.2.2'
+    // Koin for Android
+    implementation "org.koin:koin-android:$koin_version"
+// Koin Android Scope features
+    implementation "org.koin:koin-android-scope:$koin_version"
+// Koin Android ViewModel features
+    implementation "org.koin:koin-android-viewmodel:$koin_version"
+// Koin Android Experimental features
+    implementation "org.koin:koin-android-ext:$koin_version"
 }
