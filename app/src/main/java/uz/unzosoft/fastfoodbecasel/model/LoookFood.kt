@@ -6,4 +6,6 @@ data class LoookFood(
     var imageUrl: Int,
     var rating: String,
     var restorantname: String
-)
+) {
+
+}
