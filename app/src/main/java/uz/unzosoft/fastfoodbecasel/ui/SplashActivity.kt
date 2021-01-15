@@ -7,7 +7,6 @@ import android.os.Handler
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import kotlinx.android.synthetic.main.activity_splash.*
-import uz.unzosoft.fastfoodbecasel.MainActivity
 import uz.unzosoft.fastfoodbecasel.R
 import uz.unzosoft.fastfoodbecasel.data.MySharedPreference
 

@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FastFoodBecasel">
+        <activity android:name=".ui.MainActivity"></activity>
         <activity android:name=".ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,9 +19,7 @@
         </activity>
         <activity android:name=".DemoNavActivity" />
         <activity android:name=".ui.SeconFoodActivity" />
-        <activity android:name=".ui.IntroductoryActivity">
-
-        </activity>
+        <activity android:name=".ui.IntroductoryActivity"></activity>
         <activity android:name=".MainActivity" />
 
         <meta-data
