@@ -41,7 +41,7 @@ class CategoriesAdapter(var context: Context, var asiaFoodList: List<LoookFood>)
 
     inner class CategoriesFood(var itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun onBind(loookFood: LoookFood) {
-            itemView.animation = AnimationUtils.loadAnimation(context, R.anim.anim_rv_item)
+            itemView.animation = AnimationUtils.loadAnimation(context, R.anim.anim_rv_item2)
         }
 
         var foodImage: ImageView = itemView.findViewById(R.id.food_image)

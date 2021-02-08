@@ -18,6 +18,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         MySharedPreference.init(this)
         setContentView(R.layout.activity_splash)
+
         animationSplash = AnimationUtils.loadAnimation(this, R.anim.splash_anim)
         splashImage.animation = animationSplash
 
